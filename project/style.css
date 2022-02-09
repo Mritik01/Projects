@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.mainDiv{
+    background-color: antiquewhite;
+    margin: auto;
+    width: 50%;
+    height: 700px;
+    margin-top: 90px;
+    box-shadow: 15px 15px 18px gray;
+}
+.labl{
+    padding-bottom:25px;
+    margin-left: 14px;
+}
+.frm{
+    width: 98%;
+    height: 33px; 
+    border-radius: 8px;
+    border: 0px;
+}
+.txtar{
+    border: 0px;
+    border-radius: 8px
+}
+.btn{
+    background-color: gray;
+}
+.showErr{
+    color: red;
+}
+.tbl{
+    width: 100%;
+    font-size: 20px;
+}
+.detail{
+    margin-top: 40px;
+}
