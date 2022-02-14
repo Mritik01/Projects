@@ -92,7 +92,7 @@
 <div class="detail">
     <hr>
     <table class="tbl">
-        <th colspan="5">YOUR DATA</th> // Display data
+        <th colspan="5">YOUR DATA</th> <!-- Display data -->
         <tr>
             <td>Name</td>
             <td>Father's Name</td>
