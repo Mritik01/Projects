@@ -1,0 +1,51 @@
+1. sudo apt update
+2. sudo apt install apache2
+3. systemctl is-enabled apache2
+4. sudo apt install mysql-server
+5. sudo mysql_secure_installation
+6. sudo mysql
+7. SELECT user,authentication_string,plugin,host FROM mysql.user;
+8. ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_secure_password';
+9. exit
+10. sudo apt update
+11. sudo apt install php7.4 libapache2-mod-php php-mysql
+12. sudo apt install php7.4-mbstring
+13. sudo phpenmod mbstring
+14. sudo a2enmod rewrite
+15. sudo apt install php7.4-bcmath php7.4-intl php7.4-soap php7.4-zip php7.4-gd php7.4-json php7.4-curl php7.4-cli php7.4-xml php7.4-xmlrpc php7.4-gmp php7.4-common
+16. sudo systemctl reload apache2
+17. sudo apt install openjdk-17-jdk
+18. sudo apt install curl
+19. sudo apt update
+20. sudo apt install elasticsearch
+21. sudo systemctl daemon-reload
+22. sudo systemctl enable elasticsearch.service
+23. sudo systemctl start elasticsearch.service
+24. cd ~
+25. curl -sS https://getcomposer.org/installer -o composer-setup.php
+26. sudo php composer-setup.php --install-dir=/usr/bin --filename=composer
+27. composer
+28. cd /var/www/html
+29. sudo composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.4.3 magento2
+30. Install Adminer.php from google : URL(https://www.adminer.org/) and paste this file into /var/www/html directory.................................................................................................................
+30. cd /var/www/html/<magento install directory>
+31.  sudo bin/magento setup:install \
+--base-url=http://127.0.0.1/magento2 \
+--db-host=localhost \
+--db-name=<Your database name> \
+--db-user=root \
+--db-password=<YOur DB password> \
+--admin-firstname=Admin \
+--admin-lastname=Admin \
+--admin-email=admin@admin.com \
+--admin-user=admin \
+--admin-password=admin123 \
+--language=en_US \
+--currency=USD \
+--timezone=America/Chicago \
+--use-rewrites=1
+
+32. Insert these queries into your database.....
+             INSERT INTO `core_config_data` (`scope`, `scope_id`, `path`, `value`, `updated_at`) VALUES
+	     ('default',	0,	'web/unsecure/base_static_url',	'http://127.0.0.1/magento2/pub/static',	'2022-04-19 19:42:22'),
+	     ('default',	0,	'web/unsecure/base_media_url',	'http://127.0.0.1/magento2/pub/media',	'2022-04-19 19:42:22');
